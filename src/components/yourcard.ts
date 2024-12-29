@@ -10,7 +10,7 @@ export function createCart () {
     const cartTitle = document.createElement('h1');
     cartTitle.textContent = 'Your cart';
     cartTitle.className = 'cart-title';
-    titleContainer.appendChild(cartTitle);
+    titleContainer.append(cartTitle);
 
     const cartContainer = document.createElement('div');
     cartContainer.className = 'cart';
@@ -56,14 +56,11 @@ export function createCart () {
             </div>
         `;
 
-        itemContainer.appendChild(itemImage);
-        itemContainer.appendChild(itemInfo);
-
-        cartContainer.appendChild(itemContainer);
+        itemContainer.append(itemImage, itemInfo);
+        cartContainer.append(itemContainer);
     })
 
-    wrapperContainer.appendChild(titleContainer);
-    wrapperContainer.appendChild(cartContainer);
+    wrapperContainer.append(titleContainer, cartContainer);
 
-    document.body.appendChild(wrapperContainer);
+    return(wrapperContainer);
 }

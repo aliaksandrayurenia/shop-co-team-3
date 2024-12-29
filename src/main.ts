@@ -3,5 +3,4 @@
 // renderForm();
 
 import { createCart } from './components/yourcard';
-
-createCart();
+document.body.append(createCart());
