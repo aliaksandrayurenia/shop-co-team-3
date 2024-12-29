@@ -1,3 +1,7 @@
-import { renderForm } from './components/form';
+// import { renderForm } from './components/form';
 
-renderForm();
+// renderForm();
+
+import { createCart } from './components/yourcard';
+
+createCart();
